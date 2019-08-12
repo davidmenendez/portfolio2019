@@ -1,10 +1,57 @@
 extends layout
 
 block content
-  section.intro
+  section.splash
     .container
       h1.display Greetings, I'm David Menendez and I'm a front end web developer
-      a.button.button-large(href="about") about
-      //- .buttons
-      //-   a.button.button-large(href="about") about
-      //-   a.button.button-large(href="portfolio") portfolio
+      .buttons
+        a.nav-button.button(href="#about") about
+        a.nav-button.button(href="#contact") contact
+  section#about.section
+    .container
+      h2 About
+      p My Name is David Menendez and I am a professional front end web developer. I'm originally from South Florida and I am graduate of Florida State University with a Bachelor of Science in Information Technology.
+      p I currently live in Austin, Texas and work as a Software Developer for IBM. For the past several years I have been working on the IBM Cloud UI primarily as a front end developer.
+      p When I'm not coding I spend a lot of free time being active outdoors or creating music.
+  section.section
+    .container
+      h2 Resume
+      p Feel free to take my resume with you. Be sure to keep it somewhere safe!
+      .buttons
+        a.button(href="docs/david_menendez_resume.pdf") download pdf
+        a.button(href="docs/david_menendez_resume.docx") download doc
+      h3 Software Developer, IBM 8/15 - Current
+      ul.resume-list
+        li Autoscaling UI for Bluemix using Node, React, and SCSS
+        li Kubernetes UI using Node, React, and SCSS
+        li Contributor to IBM's opensource component library Carbon Components
+        li Work closely with UX to contribute to look and feel of Kubernetes UI
+        li Implemented analytics for entire Kubernetes UI
+        li Created Slack portal to drive user involvement in IBM Cloud public Slack
+        li Autoscaling API microservices using Python
+      h3 Interactive Developer II, Blackbaud Inc, 10/13 - 8/15
+      ul.resume-list
+        li Developed user interfaces and created webpages from Photoshop mockups and
+        li wireframes using HTML5, CSS3, JavaScript, and jQuery
+        li Simultaneously worked with multiple projects and clients such as Make-a-Wish
+        li Foundation and American Cancer Society
+      h3 Jr. PHP Web Developer, Zimmerman advertising, 9/12 - 9/13
+      ul.resume-list
+        li Developed, created, and maintained websites for clients such as Party City, BikeStreet
+        li USA, and White Castle
+        li Front end development with HTML, CSS, JavaScript, and jQuery as well as using the
+        li Kentico or WordPress CMS and ASP MVC4
+  section.section
+    .container
+      h3 Tools
+      p Here are some of the tools I use on a daily basis.
+      ul.tools
+        li React
+        li Node
+        li JavaScript
+        li Webpack / ES6 / Babel
+        li Git version control
+        li SCSS
+        li Unit Testing (Jest, Jasmine, Enzyme)
+        li Integration Testing (Nightmare)
+        li HTML / CSS

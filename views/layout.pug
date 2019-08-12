@@ -7,6 +7,23 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title="David Menendez | " + title
     link(rel="stylesheet", href="/stylesheets/style.css")
-    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:300&display=swap")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,700|Work+Sans&display=swap")
   body
     block content
+    footer
+      h3#contact Contact
+      ul
+        li
+          a(href="mailto:david.menendez.atx@gmail.com") david.menendez.atx@gmail.com
+        li
+          a(href="https://www.linkedin.com/in/davidamenendez" target="_blank") Linkedin
+        li
+          a(href="https://github.com/davidmenendez" target="_blank") GitHub
+      small David Menendez 2019
+  script.
+    document.querySelectorAll('.nav-button').forEach(button => {
+      button.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(button.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });

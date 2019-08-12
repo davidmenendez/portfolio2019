@@ -9,12 +9,12 @@ router.get('/', (req, res) => {
   });
 });
 
-router.get('/about', (req, res) => {
-  res.render('about', {
-    title: 'About',
-    description: 'About David Menendez',
-  });
-});
+// router.get('/about', (req, res) => {
+//   res.render('about', {
+//     title: 'About',
+//     description: 'About David Menendez',
+//   });
+// });
 
 // router.get('/portfolio', (req, res) => {
 //   res.render('portfolio', { title: 'portfolio' });
