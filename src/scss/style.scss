@@ -1,5 +1,10 @@
 $red: #d25656;
 $redHov: #9E4141;
+@mixin mobile {
+  @media (min-width: 575px) {
+    @content;
+  }
+}
 
 *,
 *:before,
@@ -54,7 +59,7 @@ p {
   font-weight: 400;
   font-size: 2.25rem;
   margin-bottom: 1rem;
-  @media (min-width: 575px) {
+  @include mobile {
     font-size: 3.375rem;
   }
 }
@@ -94,7 +99,7 @@ p {
   &:hover {
     background: $redHov;
   }
-  @media (min-width: 575px) {
+  @include mobile {
     display: inline-block;
     margin-bottom: 0;
   }
@@ -102,7 +107,7 @@ p {
 
 .buttons {
   margin-bottom: 1rem;
-  @media (min-width: 575px) {
+  @include mobile {
     .button:last-child {
       margin-left: 1rem;
     }
@@ -123,7 +128,7 @@ p {
   padding-left: 2rem;
   display: grid;
   grid-template-columns: 1fr;
-  @media (min-width: 575px) {
+  @include mobile {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -140,12 +145,12 @@ footer {
     list-style: none;
     display: flex;
     flex-direction: column;
-    @media (min-width: 575px) {
+    @include mobile {
       flex-direction: row;
     }
   }
   li {
-    @media (min-width: 575px) {
+    @include mobile {
       margin-left: 1rem;
       &:first-child {
         margin-left: 0;
@@ -156,4 +161,20 @@ footer {
 
 small {
   margin-top: 1rem;
+}
+
+.about {
+  article {
+    overflow: hidden;
+  }
+  img {
+    width: 100%;
+    margin: 0 0 1rem 0;
+    max-width: 100%;
+    @include mobile {
+      max-width: 300px;
+      float: left;
+      margin: 0 1rem 0 0;
+    }
+  }
 }

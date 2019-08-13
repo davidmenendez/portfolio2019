@@ -128,3 +128,16 @@ footer {
 
 small {
   margin-top: 1rem; }
+
+.about article {
+  overflow: hidden; }
+
+.about img {
+  width: 100%;
+  margin: 0 0 1rem 0;
+  max-width: 100%; }
+  @media (min-width: 575px) {
+    .about img {
+      max-width: 300px;
+      float: left;
+      margin: 0 1rem 0 0; } }
