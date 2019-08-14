@@ -1,5 +1,8 @@
 $red: #d25656;
 $redHov: #9E4141;
+$white: #fff;
+$offWhite: #eee;
+$black: #222;
 @mixin mobile {
   @media (min-width: 575px) {
     @content;
@@ -21,7 +24,7 @@ html {
 body {
   font-family: "Work Sans", sans-serif;
   line-height: 1.5;
-  color: #222;
+  color: $black;
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
@@ -56,11 +59,6 @@ h4 {
 
 a {
   text-decoration: none;
-  color: #fff;
-  transition: color 300ms ease;
-  &:hover {
-    color: #ddd;
-  }
 }
 
 p {
@@ -91,14 +89,14 @@ p {
   text-align: center;
   background: url("../images/splash.jpg") center center fixed;
   background-size: cover;
-  color: #fff;
+  color: $white;
 }
 
 .button {
   font-weight: 700;
   background: $red;
   border: 1px solid transparent;
-  color: #fff;
+  color: $white;
   cursor: pointer;
   line-height: 1.5;
   border-radius: .25rem;
@@ -127,22 +125,20 @@ p {
   }
 }
 
-.resume-list {
-  li {
-    margin-top: .5rem;
-  }
+.resume-item {
+  margin-top: .5rem;
 }
 
 .section {
   padding: 6rem 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $offWhite;
 }
 
 .tools {
   padding-left: 2rem;
   display: grid;
   grid-template-columns: 1fr;
-  li {
+  &-item {
     margin-top: .5rem;
   }
   @include mobile {
@@ -150,15 +146,15 @@ p {
   }
 }
 
-footer {
-  color: #fff;
+.footer {
+  color: $white;
   background: $red;
   padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  ul {
+  &-links {
     padding: 0;
     list-style: none;
     display: flex;
@@ -169,15 +165,15 @@ footer {
       width: auto;
     }
   }
-  li {
+  &-link-item {
     margin-left: 1rem;
     &:first-child {
       margin-left: 0;
     }
   }
-  a {
-    border: 2px solid #fff;
-    color: #fff;
+  &-link {
+    border: 2px solid $white;
+    color: $white;
     border-radius: 50%;
     height: 3rem;
     width: 3rem;
@@ -187,7 +183,7 @@ footer {
     transition: color 300ms ease, background 300ms ease;
     &:hover {
       color: $red;
-      background: #fff;
+      background: $white;
     }
   }
 }
@@ -196,7 +192,7 @@ footer {
   &-blurb {
     overflow: hidden;
   }
-  img {
+  &-image {
     width: 100%;
     margin: 0 0 1rem 0;
     max-width: 100%;
