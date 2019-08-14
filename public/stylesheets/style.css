@@ -126,6 +126,7 @@ footer {
   align-items: center;
   text-align: center; }
   footer ul {
+    padding: 0;
     list-style: none;
     display: flex;
     flex-direction: column; }
