@@ -59,6 +59,7 @@ h4 {
 
 a {
   text-decoration: none;
+  color: $red;
 }
 
 p {
@@ -82,11 +83,6 @@ p {
 }
 
 .splash {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  text-align: center;
   background: url("../images/splash.jpg") center center fixed;
   background-size: cover;
   color: $white;
@@ -211,4 +207,12 @@ p {
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+}
+
+.fullsize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
 }
